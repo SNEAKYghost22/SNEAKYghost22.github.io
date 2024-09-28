@@ -1,10 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Muhamamd Rafi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Muhammad Rafi</h1>
-    <h2>1202220299</h2>
-    <h2>Rekayasa Industri</h2>
+    <div class="container">
+        <div class="profile">
+            <img src="poto gw2.jpg" class="profile-pic">
+            <h1>Muhammad rafi</h1>
+            <p>1202220299</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/muhammadrafi.22?igsh=cmw2MW5tNWNkMXc2" target="_blank">
+                    <img src="ig white.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://github.com/SNEAKYghost22" target="_blank">
+                    <img src="github white.png" alt="Facebook" class="social-icon2">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="date-time">
+        <p id="datetime"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const datetime = now.toLocaleString('id-ID', {
+                dateStyle: 'long', 
+                timeStyle: 'short'
+            });
+            document.getElementById("datetime").innerText = datetime;
+        }
+        setInterval(updateTime, 1000); // Update every second
+    </script>
 </body>
 </html>
